@@ -1,0 +1,13 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.sketch__container {
+    display: flex;
+    flex-wrap: wrap;
+    inline-size: 196px;
+    block-size: 196px;
+    outline: 2px solid #000;
+}
