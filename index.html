@@ -3,11 +3,54 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Etch a sketch</title>
+    <link rel="stylesheet" href="./styles/fonts.css">
+    <link rel="stylesheet" href="./styles/global.css">
     <link rel="stylesheet" href="./styles/style.css" />
     <script defer src="./scripts/script.js"></script>
 </head>
-<body>
-    <div class="sketch__container"></div>
+<body class="content">
+    <header class="header">
+        <h1 class="header__title">etch-a-sketch</h1>
+    </header>
+    <main class="sketch">
+        <section class="sketch__user-bar">
+            <form class="sketch__settings">
+                <fieldset>
+                    <input class="sketch__color-picker" type="color" value="#00aeff">
+                </fieldset>
+
+                <fieldset class="sketch__size">
+                    <span class="sketch__range-text"></span>
+                    <input class="sketch__range" type="range" min="16" max="64" step="1" value="16">
+                </fieldset>
+            </form>
+            <div class="sketch__buttons-container">
+                <button class="button sketch__button" id="color" type="button">
+                    <span class="button__color-text">Один цвет</span>
+                </button>
+
+                <button class="button sketch__button" id="random" type="button">
+                    <span class="button__color-text">Случайные цвета</span>
+                </button>
+
+                <button class="button sketch__button" id="eraser" type="button">
+                    <span class="button__color-text">Ластик</span>
+                </button>
+
+                <button class="button sketch__button" id="fill" type="button">
+                    <span class="button__color-text">Залить цветом</span>
+                </button>
+
+                <button class="button sketch__button" id="clear" type="button">
+                    <span class="button__color-text">Очистить</span>
+                </button>
+            </div>
+        </section>
+        <section class="sketch__container"></section>
+    </main>
+    <footer class="footer">
+        <p class="footer__text">Разработал <a class="footer__link" href="https://github.com/ceochupin" target="_blank">ceochupin</a></p>
+    </footer>
 </body>
 </html>

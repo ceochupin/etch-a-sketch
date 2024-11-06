@@ -1,13 +1,112 @@
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
+.content {
+    display: grid;
+    gap: 30px;
+    justify-items: center;
+    align-content: space-around;
+    font-family: 'PT Mono Regular', monospace;
+    font-size: 16px;
+    min-block-size: 100dvb;
+    background: linear-gradient(135deg, rgb(131 156 244), rgb(189 168 234), rgb(221 187 226));
+}
+
+.header {
+    
+}
+
+.header__title {
+    font-size: 48px;
+}
+
+.sketch {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.sketch__user-bar {
+    flex: 1;
+    display: grid;
+    align-items: space-between;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 15px;
+    background: rgb(248 195 67);
+}
+
+.sketch__settings {
+    display: grid;
+    gap: 20px;
+    place-items: center;
+}
+
+.sketch__color-picker {
+    appearance: none;
+    inline-size: 60px;
+    block-size: 60px;
+    border-radius: 50%;
+    box-shadow: 4px 4px 4px rgb(0 0 0 / 20%);
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sketch__color-picker::-webkit-color-swatch-wrapper {
+    padding: 0;
+    margin: 0;
+}
+
+.sketch__size {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+}
+
+.sketch__range {
+    margin: 0;
+    padding: 0;
+}
+
+.sketch__buttons-container {
+    display: grid;
+    gap: 10px;
+}
+
+.button {
+    border: none;
+    border-radius: 8px;
+    padding-inline: 20px;
+    padding-block: 10px;
+    box-shadow: 4px 4px 4px rgb(0 0 0 / 20%);
+    cursor: pointer;
+    background-color: #f0f6d5;
+    
+}
+
+.button__color-text {
+    color: #000;
+}
+
+.sketch__button--random {
+    background: rgb(255 255 255);
+}
+
+.sketch__button--random:hover {
+    background: linear-gradient(90deg, rgb(255 166 2), rgb(255 22 141), rgb(130 39 255));
 }
 
 .sketch__container {
     display: flex;
     flex-wrap: wrap;
-    inline-size: 196px;
-    block-size: 196px;
+    inline-size: 512px;
     outline: 2px solid #000;
+    background: rgb(255 255 255);
 }
+
+.footer {}
+
+.footer__text {}
