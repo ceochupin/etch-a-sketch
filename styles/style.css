@@ -9,10 +9,6 @@
     background: linear-gradient(135deg, rgb(131 156 244), rgb(189 168 234), rgb(221 187 226));
 }
 
-.header {
-    
-}
-
 .header__title {
     font-size: 48px;
     text-shadow: 4px 4px 2px rgb(0 0 0 / 20%);
@@ -101,7 +97,3 @@
     background: #000;
     box-shadow: 8px 8px 4px rgb(0 0 0 / 20%);
 }
-
-.footer {}
-
-.footer__text {}

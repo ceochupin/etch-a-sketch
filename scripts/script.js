@@ -23,7 +23,7 @@ const createSketchSquare = (count, size, border) => {
     for (let i = 0; i < count * count; i++) {
         const square = document.createElement("div");
         square.className = "sketch__square";
-        square.style.cssText = `width:${size}px;height:${size}px;background:#fff;${border ? 'outline:1px solid #000;outline-offset:-1px;' : ''}`;
+        square.style.cssText = `width:${size}px; height:${size}px; background:#fff; ${border ? 'outline:1px solid #000; outline-offset:-1px;' : ''}`;
         fragment.appendChild(square);
     }
     elements.sketchContainer.appendChild(fragment);
