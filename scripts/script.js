@@ -55,14 +55,12 @@ function colorSketchSquare(squares) {
 
 // Функция для обновления цвета кнопки
 function updateButtonColor(button, isActive) {
-    if (button.id === "color") {
+    if (button.id === "color" || button.id === "fill") {
         button.style.background = isActive ? colorPicker.value : "#f0f6d5";
     } else if (button.id === "random") {
         button.style.background = isActive ? "linear-gradient(90deg, #52d6fc, #ff0fff)" : "#f0f6d5";
-    } else if (button.id === "eraser") {
-        button.style.background = isActive ? "#ffffff" : "#f0f6d5";
     } else {
-        button.style.background = isActive ? "#f0f6d5" : "#f0f6d5";
+        button.style.background = isActive ? "#ffffff" : "#f0f6d5";
     }
 }
 
@@ -75,30 +73,29 @@ function setActiveButton(button) {
 }
 
 // Установка обработчиков событий на кнопки
-[buttonColor, buttonRandom, buttonEraser].forEach(button => {
-    button.addEventListener("click", () => {
-        currentMode = button.id;
-        setActiveButton(button);
-    });
-    button.addEventListener("mouseenter", () => {
-        if (!button.classList.contains("active")) {
-            updateButtonColor(button, true);
-        }
-    });
-    button.addEventListener("mouseleave", () => {
-        if (!button.classList.contains("active")) {
-            updateButtonColor(button, false);
-        }
-    });
-});
+[buttonColor, buttonRandom, buttonEraser, buttonFill, buttonClear].forEach(button => {
+    if (button === buttonColor || 
+        button === buttonRandom || 
+        button === buttonEraser) {
 
-// Обработчики для кнопок Fill и Clear
-buttonFill.addEventListener("click", () => {
-    document.querySelectorAll(".sketch__square").forEach(colorSquare);
-});
+        button.addEventListener("click", () => {
+            currentMode = button.id;
+            setActiveButton(button);
+        });
+    } else {
+        button.addEventListener("click", () => {
+            document.querySelectorAll(".sketch__square").forEach(button === buttonFill ? colorSquare : eraseSquare);
+        });
+    }
 
-buttonClear.addEventListener("click", () => {
-    document.querySelectorAll(".sketch__square").forEach(eraseSquare);
+    // Ховер для кнопок
+    ["mouseenter", "mouseleave"].forEach(mouse => {
+        button.addEventListener(mouse, () => {
+            if (!button.classList.contains("active")) {
+                updateButtonColor(button, mouse === "mouseenter");
+            }
+        });
+    });    
 });
 
 // Обработчик изменения цвета
