@@ -1,105 +1,53 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Etch a sketch</title>
-    <link rel="stylesheet" href="./styles/fonts.css" />
-    <link rel="stylesheet" href="./styles/global.css" />
-    <link rel="stylesheet" href="./styles/style.css" />
-    <script defer src="./scripts/script.js"></script>
-</head>
-<body class="content">
+  </head>
+  <body class="content">
     <header class="header">
-        <h1 class="header__title">
-            etch-a-sketch
-        </h1>
+      <h1 class="header__title">etch-a-sketch</h1>
     </header>
     <main class="sketch">
-        <section class="sketch__user-bar">
-            <form class="sketch__settings">
-                <fieldset>
-                    <input
-                        class="sketch__color-picker"
-                        type="color"
-                        value="#00aeff">
-                </fieldset>
+      <section class="sketch__user-bar">
+        <form class="sketch__settings">
+          <fieldset>
+            <input class="sketch__color-picker" type="color" value="#00aeff" />
+          </fieldset>
 
-                <fieldset class="sketch__fieldset">
-                    <span class="sketch__checkbox-text">
-                        Включить сетку
-                    </span>
+          <fieldset class="sketch__fieldset">
+            <span class="sketch__checkbox-text"> Включить сетку </span>
 
-                    <input
-                        class="sketch__checkbox"
-                        type="checkbox"
-                        checked>
-                </fieldset>
+            <input class="sketch__checkbox" type="checkbox" checked />
+          </fieldset>
 
-                <fieldset class="sketch__fieldset">
-                    <span class="sketch__range-text"></span>
-                    <input
-                        class="sketch__range"
-                        type="range"
-                        min="16"
-                        max="64"
-                        step="1"
-                        value="16">
-                </fieldset>
-            </form>
-            <div class="sketch__buttons-container">
-                <button
-                    class="button sketch__button"
-                    id="color"
-                    type="button"
-                    >Один цвет
-                </button>
+          <fieldset class="sketch__fieldset">
+            <span class="sketch__range-text"></span>
+            <input class="sketch__range" type="range" min="16" max="64" step="1" value="16" />
+          </fieldset>
+        </form>
+        <div class="sketch__buttons-container">
+          <button class="button sketch__button" id="color" type="button">Один цвет</button>
 
-                <button
-                    class="button sketch__button"
-                    id="random"
-                    type="button"
-                    >Случайные цвета
-                </button>
+          <button class="button sketch__button" id="random" type="button">Случайные цвета</button>
 
-                <button
-                    class="button sketch__button"
-                    id="eraser"
-                    type="button"
-                    >Ластик
-                </button>
+          <button class="button sketch__button" id="eraser" type="button">Ластик</button>
 
-                <button
-                    class="button sketch__button"
-                    id="fill"
-                    type="button"
-                    >Залить цветом
-                </button>
+          <button class="button sketch__button" id="fill" type="button">Залить цветом</button>
 
-                <button
-                    class="button sketch__button"
-                    id="clear"
-                    type="button"
-                    >Очистить
-                </button>
-            </div>
-        </section>
+          <button class="button sketch__button" id="clear" type="button">Очистить</button>
+        </div>
+      </section>
 
-        <section class="sketch__container"></section>
+      <section class="sketch__container"></section>
     </main>
     <footer class="footer">
-        <a
-            class="footer__link"
-            href="https://github.com/ceochupin"
-            target="_blank">
-            <p class="footer__text">
-                Разработал ceochupin
-            </p>
+      <a class="footer__link" href="https://github.com/ceochupin" target="_blank">
+        <p class="footer__text">Разработал ceochupin</p>
 
-            <img
-                class="footer__icon"
-                src="./images/github-mark.svg">
-        </a>
+        <img class="footer__icon" src="./images/github-mark.svg" />
+      </a>
     </footer>
-</body>
+  </body>
 </html>
